@@ -118,16 +118,20 @@ class MyApp extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.blueGrey,
                               borderRadius: BorderRadius.circular(5)),
-                          child: FlatButton(
-                            child: Text(
-                              "Update",
-                              style: TextStyle(
-                                  color: Colors.white38,
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w600),
+                          child: SizedBox(
+                            width: double.infinity,
+                            // height: double.infinity,
+                            child: FlatButton(
+                              onPressed: () => log('data: Press'),
+                              onLongPress: () => log('data : Long press'),
+                              child: Text(
+                                "Update",
+                                style: TextStyle(
+                                    color: Colors.white38,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600),
+                              ),
                             ),
-                            onPressed: () => log('data: Press'),
-                            onLongPress: ()=> log('data : Long press'),
                           )),
                     ],
                   )
