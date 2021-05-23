@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:developer';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
                       height: 150,
 
 //                        width: 200,
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 150),
+                      margin: EdgeInsets.only(
+                          left: 20, right: 20, top: 10, bottom: 150),
                       decoration: BoxDecoration(
 //                        image: DecorationImage(
 ////                          image: Image.ne
@@ -46,7 +48,6 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   Column(
                     children: <Widget>[
                       Container(
@@ -91,24 +92,47 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                       ),
+//                      Container(
+//                        height: 50,
+//                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
+//                        alignment: Alignment.center,
+//                        decoration: BoxDecoration(
+//                            color: Colors.blueGrey,
+//                            borderRadius: BorderRadius.circular(5)),
+//                        child: Padding(
+//                          padding: const EdgeInsets.all(8.0),
+//                          child: Padding(
+//                            padding: const EdgeInsets.only(left: 0),
+//                            child: Text(
+//                              "Sign In",
+//                              style: TextStyle(color: Colors.white38),
+//                            ),
+//                          ),
+//                        ),
+//                      ),
+
                       Container(
-                        height: 50,
-                        margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            color: Colors.blueGrey,
-                            borderRadius: BorderRadius.circular(5)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 0),
-                            child: Text(
-                              "Sign In",
-                              style: TextStyle(color: Colors.white38),
+//                        height: 50,
+                          margin: EdgeInsets.only(left: 20, right: 20, top: 10),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: Colors.blueGrey,
+                              borderRadius: BorderRadius.circular(5)),
+                          child: SizedBox(
+                            width: double.infinity,
+                            // height: double.infinity,
+                            child: FlatButton(
+                              onPressed: () => log('data: Press'),
+                              onLongPress: () => log('data : Long press'),
+                              child: Text(
+                                "Update",
+                                style: TextStyle(
+                                    color: Colors.white38,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w600),
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
+                          )),
                     ],
                   )
                 ],
